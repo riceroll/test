@@ -2,7 +2,7 @@
 <head>
   <script>
     var CONTENT='';
-    fetch('README.md').then((r)=>{r.text().then((d)=>{ CONTENT = d})});
+    fetch('README.md').then((r)=>{r.text().then((d)=>{ CONTENT = d; console.log(d)})});
     console.log(CONTENT);
     
     </script>
