@@ -1,7 +1,9 @@
 <html>
 <head>
   <script>
-    console.log(2);
+    var CONTENT='';
+    fetch('README.md').then((r)=>{r.text().then((d)=>{ CONTENT = d})});
+    console.log(CONTENT);
     
     </script>
   </head>
