@@ -1,9 +1,23 @@
 <html>
 <head>
   <script>
-    var CONTENT='';
-    fetch('README.md').then((r)=>{r.text().then((d)=>{ CONTENT = d; console.log(d)})});
-    console.log(CONTENT);
+    var jsonString='';
+    fetch('README.md').then((r)=>{r.text().then(   (d)=>{ jsonString = d; renderCards(jsonString);    )});
+    
+    var renderCards = (jsonString) => {
+      var cards = JSON.parse(jsonString);
+      for card in cards:
+        var element = document.getElementById(card['divID']);
+        element.hide();
+      
+      for card in cards:
+        if card['field'] === selectedField;
+          var element = document.getElementById(card['divID']);
+          element.show();
+          
+            
+      
+    }
     
     </script>
   </head>
